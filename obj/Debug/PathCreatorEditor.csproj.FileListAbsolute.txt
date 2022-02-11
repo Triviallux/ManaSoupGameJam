@@ -1,0 +1,2 @@
+F:\UnityProjects\GameJams\ManaSoupGameJam\obj\Debug\PathCreatorEditor.csproj.AssemblyReference.cache
+F:\UnityProjects\GameJams\ManaSoupGameJam\obj\Debug\PathCreatorEditor.csproj.CoreCompileInputs.cache

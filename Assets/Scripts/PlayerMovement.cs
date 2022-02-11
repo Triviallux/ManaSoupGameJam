@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask GroundLayers;
     public  bool Grounded;
     float GroundedRadius = .5f;
-    float GroundedOffset = .2f;
+    float GroundedOffset = 1f;
     // Start is called before the first frame update
     void Start()
     {

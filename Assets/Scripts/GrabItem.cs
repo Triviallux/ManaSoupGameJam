@@ -17,6 +17,7 @@ public class GrabItem : MonoBehaviour
     //Grab Objects
     public Transform _ItemGrabParent;
     public GameObject _ItemToGrab;
+    public GameObject _HintIcon;
     //Animation IDs
     private int _animIDgrabItem;
 
@@ -30,21 +31,27 @@ public class GrabItem : MonoBehaviour
     void Update()
     {
         GrabOrDrop();
+        if (CheckforItem())
+        {
+            _HintIcon.SetActive(true);
+        }
+        else
+        {
+            _HintIcon.SetActive(false);
+        }
     }
 
     private bool CheckforItem()
-    {
-        Vector3 spherePosition = new Vector3(transform.position.x, transform.position.y - _ItemCheckOffset, transform.position.z);
-        _checkedItem = Physics.CheckSphere(spherePosition, _ItemCheckRadius, _ItemLayers, QueryTriggerInteraction.Ignore);
+    {   
         // update animator if using character
-        return _checkedItem;
+        return Physics.Raycast(Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f)), _ItemCheckRadius, _ItemLayers, QueryTriggerInteraction.Ignore); 
     }
 
     public void GrabOrDrop()
     {
         _timer += Time.deltaTime;
 
-        if (Input.GetKey(KeyCode.Mouse0) && _buttonTimeout < _timer && _buttonReset)
+        if (Input.GetKey(KeyCode.Mouse0) && _buttonTimeout < _timer && _buttonReset && Time.timeScale > 0.1f)
         {
             _buttonReset = false;
             if (_grabbedItem)

@@ -53,27 +53,24 @@
     <UnityVersion>2020.3.24f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\PathCreator\Examples\Scripts\PathSpawner.cs" />
-    <Compile Include="Assets\WolfTrigger.cs" />
+    <Compile Include="Assets\Scripts\WolfTrigger.cs" />
+    <Compile Include="Assets\Scripts\WitchHunt.cs" />
     <Compile Include="Assets\Scripts\ItemGoal.cs" />
+    <Compile Include="Assets\HuntingWitch.cs" />
     <Compile Include="Assets\GameManager.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\LevelLoader.cs" />
-    <Compile Include="Assets\KillPlayer.cs" />
+    <Compile Include="Assets\Scripts\KillPlayer.cs" />
     <Compile Include="Assets\Scripts\MouseInput.cs" />
     <Compile Include="Assets\Scripts\ProjectileMove.cs" />
     <Compile Include="Assets\Scripts\FootstepsSounds.cs" />
     <Compile Include="Assets\Scripts\breadCrumbs.cs" />
-    <Compile Include="Assets\PathCreator\Examples\Scripts\GeneratePathExample.cs" />
-    <Compile Include="Assets\PathCreator\Examples\Scripts\PathPlacer.cs" />
-    <Compile Include="Assets\Scripts\PathFollower.cs" />
-    <Compile Include="Assets\Scripts\ProjectileTargeting.cs" />
-    <Compile Include="Assets\PathCreator\Examples\Scripts\PathSceneTool.cs" />
+    <Compile Include="Assets\Scripts\WitchManager.cs" />
+    <Compile Include="Assets\Scripts\WitchDestroyer.cs" />
+    <Compile Include="Assets\SelfDestroy.cs" />
     <Compile Include="Assets\Scripts\GrabItem.cs" />
-    <Compile Include="Assets\PathCreator\Examples\Scripts\PathFollower.cs" />
-    <Compile Include="Assets\Scripts\ProjectileSpawn.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\PathCreator\Examples\Scripts\RoadMeshCreator.cs" />
+    <Compile Include="Assets\SafeLayer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -720,14 +717,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="PathCreator.csproj">
-      <Project>{4741DF7F-38C9-3784-D977-18B66674F151}</Project>
-      <Name>PathCreator</Name>
-    </ProjectReference>
-    <ProjectReference Include="PathCreatorEditor.csproj">
-      <Project>{F8947086-689C-5AF6-B40B-D238F06DBF08}</Project>
-      <Name>PathCreatorEditor</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.HighDefinition.Config.Runtime.csproj">
       <Project>{68097345-8D67-3C3B-F873-82FED7B90DB7}</Project>
       <Name>Unity.RenderPipelines.HighDefinition.Config.Runtime</Name>
